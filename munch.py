@@ -18,7 +18,6 @@ from random import choice
 # A. functions -------------------------
 
 # a1. chooseDishes
-
 def chooseDishes(days):     #how does days == answer?***
     while len(myMenu) < (days):  
         chosenDish = choice(foodWeLike)
@@ -30,15 +29,13 @@ def chooseDishes(days):     #how does days == answer?***
         print(myMenu.index(dish) + 1, dish) #different way to print numbered list.
     print()
     print("Out of all these dishes, my favorite has to be.. " + choice(myMenu))
-    
+
     '''
     1. choose rando dish from foodWeLike DONE
     2. make sure dish isn't already chosen, then add to myMenu list DONE
     3. repeat until we have required number of dishes in myMenu DONE
     '''
-    
 # a2. shoppingList
-
 def buildShoppingList():
     myShoppingList = []  #created inside function. also ok outside, this is cleaner. this is local in scope, can only print inside function
     if "Lentil Soup" in myMenu:
@@ -85,8 +82,6 @@ def sign_off():
     print()
     print("No worries. Buon appetito!")
             
-
-
 # B. lists -------------------------------
 
 # b1. list of favorite meals
@@ -96,7 +91,6 @@ foodWeLike = ["Lentil Soup", "Thali Bowls", "Baked Potatoes", "Japanese Pancakes
 myMenu = [] #blank to autopopulate with chooseDishes function GLOBAL in scope
 
 #myShoppingList = []  *Moved into function to make local scope. more modulear
-
 
 # b2. list of ingredients per meal
 #dish = ['ing1', 'ing2'] #advanced, turn into 2D lists to link meal w ing, but then dishes become varianble adn can't have spaces
@@ -109,12 +103,10 @@ pastaMarinara = ['Pasta', 'Tomato Sauce', 'Cheese', 'Chickpeas', 'Kale']
 burritos = ['Tortillas', 'Beans', 'Rice', 'Cheese', 'Salsa', 'Sour Cream', 'Avocado', 'Cilantro', 'Olives']
 saladNicoise = ['Eggs', 'Green Beans', 'Chickpeas', 'Olives', 'Lettuce', 'Nicoise Dressing', 'Potatoes', 'Shallot', 'Cherry tomatoes']
 
-
 #1. How many days to plan?
 again = "y"
 while again == "y":
     print("Hello, I'm Munch! I'll help you to plan your dinner menu...")
-
     answer = input("How many days would you like me to plan?  ") #stored as string. but if choose >7, program does nothing
     answer = int(answer) #otherwise can't get function outliers of 0 or >7 
 
@@ -130,8 +122,6 @@ while again == "y":
 
 #2. Choose dishes? (function)
     chooseDishes(answer)
-
-
 
 #3. Build shopping list (function)
 
@@ -164,4 +154,3 @@ else:
     print()
     print("You got it! Bye for now.")
     '''
-        
